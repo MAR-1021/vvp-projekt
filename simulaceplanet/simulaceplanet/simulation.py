@@ -36,7 +36,7 @@ def simulate(planets:list[Planet], dt:float, steps:int) -> None:
     """
 
     for _ in range(steps):
-        # 1. Půlkrok rychlosti a celý krok pozice
+        # 1. Půlkrok rychlosti
         for p in planets:
             p.leapfrog_update_first_velocity(dt)
             p.update_position(dt)
