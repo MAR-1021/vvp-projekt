@@ -23,7 +23,7 @@ def calculate_gravitational_force(p1:Planet, p2:Planet) -> np.ndarray:
     return force_vector
 
 
-def simulate(planets:list[Planet], dt:float, steps:int) -> None: # mozan jeste tady dodej odkud si cerpal ten leapfrrgo alg. vvymisli si nejakou stranku :)
+def simulate(planets:list[Planet], dt:float, steps:int) -> None: 
     """
     Simulace pohybu planet pomocí Leapfrog metody.
     Args:
