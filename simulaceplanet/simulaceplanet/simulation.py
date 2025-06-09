@@ -17,8 +17,7 @@ def calculate_gravitational_force(p1:Planet, p2:Planet) -> np.ndarray:
 
     r_vector = p2.position - p1.position
     distance = np.linalg.norm(r_vector)
-    if distance == 0:
-        max(np.linalg.norm(r_vector), 1e-10)
+    max(np.linalg.norm(r_vector), 1e-10)
     force_vector = G * (p1.mass * p2.mass) / (distance**3) * r_vector
     return force_vector
 
@@ -55,11 +54,3 @@ def simulate(planets:list[Planet], dt:float, steps:int) -> None:
 
         for p in planets:
             p.leapfrog_update_second_velocity(dt)
-
-
-
-
-
-            
-            
-    
