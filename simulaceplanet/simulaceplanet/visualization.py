@@ -68,7 +68,7 @@ def create_animation(planets:list[Planet], interval:float=100, kazdy_krok:int=10
 
     def update(frame):
         for i in range(num_planet):
-            body[i].set_data(traj_x[i, frame], traj_y[i, frame])
+            body[i].set_data([traj_x[i, frame]], [traj_y[i, frame]])
             trails[i].set_data(traj_x[i, :frame+1], traj_y[i, :frame+1])
         return body + trails
 
